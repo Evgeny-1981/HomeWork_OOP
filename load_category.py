@@ -10,5 +10,7 @@ with open(path, 'r', encoding='utf8') as f:
 
     for category in data:
         category = Category(category['name'], category['description'], category['products'])
-        print(category.products)
+        print(Category)
+    print(Category.quantity_category)
+    # for product in data:
 
