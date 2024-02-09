@@ -1,3 +1,5 @@
+
+
 class Category:
     name: str
     description: str
@@ -27,25 +29,16 @@ class Product:
         self.quantity_in_stock = quantity_in_stock
 
 
-if __name__ == '__main__':
-    cat1 = Category('Видеотехника', 'qwert', ['tele1', 'tele2', 'tele3'])
-    cat2 = Category('Видеотехника', 'qwert', ['tele1', 'tele1', 'tele1', 'tele7', 'tele8'])
-    cat3 = Category('Видеотехника', 'qwert', ['tele1', 'tele2', 'tele4'])
+# for item in load_categorys():
+#     print(item)
 
-    print(cat1)
-    print(cat1.name)
-    print(cat1.description)
-    print(cat1.products)
-    print()
-    print(cat2)
-    print(cat2.name)
-    print(cat2.description)
-    print(cat2.products)
-    print()
-    print(cat3)
-    print(cat3.name)
-    print(cat3.description)
-    print(cat3.products)
-    print()
-    print(Category.quantity_category)
-    print(Category.quantity_uniq_product)
+# for item in category:
+#     print(item)
+
+# category = load_categorys()
+# product = load_products()
+#
+# print(category)
+# print(product)
+# print(Category.quantity_category)
+# print(Category.quantity_uniq_product)
