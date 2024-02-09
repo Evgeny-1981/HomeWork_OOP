@@ -1,7 +1,7 @@
 import json
 import pathlib
 
-from main import Category, Product
+from classes import Category, Product
 
 path = pathlib.Path("data/products.json")
 with open(path, 'r', encoding='utf8') as f:
