@@ -1,4 +1,4 @@
-from load_from_json import load_categorys, load_products
+from utils.load_from_json import load_categorys, load_products
 
 category = load_categorys()
 product = load_products()

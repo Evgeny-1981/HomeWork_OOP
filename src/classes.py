@@ -33,3 +33,4 @@ class Product:
         self.price = price
         self.quantity_in_stock = quantity_in_stock
 
+

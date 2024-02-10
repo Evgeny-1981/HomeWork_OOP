@@ -4,7 +4,7 @@ from pathlib import Path
 from src.classes import Category, Product
 
 BASE_DIR = Path(__file__).parent
-FILE_NAME = Path(BASE_DIR, "data", "products.json")
+FILE_NAME = Path(BASE_DIR, "products.json")
 with open(FILE_NAME, 'r', encoding='utf8') as f:
     data = json.load(f)
     category_list = []
