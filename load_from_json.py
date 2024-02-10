@@ -1,10 +1,11 @@
 import json
-import pathlib
+from pathlib import Path
 
 from src.classes import Category, Product
 
-path = pathlib.Path("data/products.json")
-with open(path, 'r', encoding='utf8') as f:
+BASE_DIR = Path(__file__).parent
+FILE_NAME = Path(BASE_DIR, "data", "products.json")
+with open(FILE_NAME, 'r', encoding='utf8') as f:
     data = json.load(f)
     category_list = []
     product_list = []
