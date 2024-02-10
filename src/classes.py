@@ -32,3 +32,4 @@ class Product:
         self.description = description
         self.price = price
         self.quantity_in_stock = quantity_in_stock
+
