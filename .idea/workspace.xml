@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f60a13f-ddff-404b-a185-4c7b8740943a" name="Changes" comment="Начинаю делать домашнее задание по ООП 13.2">
+    <list default="true" id="8f60a13f-ddff-404b-a185-4c7b8740943a" name="Changes" comment="13.2 Задание №1">
+      <change afterPath="$PROJECT_DIR$/q.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/load_from_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/load_from_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/utils/products.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,36 +44,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test.test_product_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_category.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_homework_oop.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_product.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.albums.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bankaccount.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bottle.executor&quot;: &quot;Run&quot;,
-    &quot;Python.class.executor&quot;: &quot;Run&quot;,
-    &quot;Python.classes (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.classes.executor&quot;: &quot;Run&quot;,
-    &quot;Python.load_category.executor&quot;: &quot;Run&quot;,
-    &quot;Python.load_from_json (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.load_from_json.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.number.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qwe.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qwerty.executor&quot;: &quot;Run&quot;,
-    &quot;Python.students.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Evgeny/PycharmProjects/HomeWork_OOP&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test.test_product_init.executor": "Run",
+    "Python tests.Python tests in test.py.executor": "Run",
+    "Python tests.Python tests in test_category.py.executor": "Run",
+    "Python tests.Python tests in test_homework_oop.py.executor": "Run",
+    "Python tests.Python tests in test_product.py.executor": "Run",
+    "Python.albums.executor": "Run",
+    "Python.bankaccount.executor": "Run",
+    "Python.bottle.executor": "Run",
+    "Python.class.executor": "Run",
+    "Python.classes (1).executor": "Run",
+    "Python.classes.executor": "Run",
+    "Python.load_category.executor": "Run",
+    "Python.load_from_json (1).executor": "Run",
+    "Python.load_from_json.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.number.executor": "Run",
+    "Python.q.executor": "Run",
+    "Python.qwe.executor": "Run",
+    "Python.qwerty.executor": "Run",
+    "Python.students.executor": "Run",
+    "Python.task1.executor": "Run",
+    "Python.task2.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Evgeny/PycharmProjects/HomeWork_OOP",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Evgeny\PycharmProjects\HomeWork_OOP" />
@@ -83,29 +88,7 @@
       <command value="load_from_json" />
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_homework_oop.py">
-    <configuration name="bankaccount" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="oop_additional_tasks" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../oop_additional_tasks/lesson2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../oop_additional_tasks/lesson2/bankaccount.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HomeWork_OOP" />
       <option name="ENV_FILES" value="" />
@@ -172,6 +155,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="q" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HomeWork_OOP" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/q.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test_homework_oop.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="HomeWork_OOP" />
       <option name="ENV_FILES" value="" />
@@ -188,19 +193,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.q" />
       <item itemvalue="Python.load_from_json (1)" />
-      <item itemvalue="Python.bankaccount" />
       <item itemvalue="Python.classes" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.load_from_json (1)" />
         <item itemvalue="Python.classes" />
-        <item itemvalue="Python.bankaccount" />
+        <item itemvalue="Python.q" />
+        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +281,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707716167178</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="13.2 Задание №1">
+      <option name="closed" value="true" />
+      <created>1707718035031</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707718035031</updated>
+    </task>
+    <task id="LOCAL-00009" summary="13.2 Задание №1">
+      <option name="closed" value="true" />
+      <created>1707718050438</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707718050438</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,17 +306,8 @@
     <MESSAGE value="Вариант для сдачи №1" />
     <MESSAGE value="Внес рекомендации наставника" />
     <MESSAGE value="Начинаю делать домашнее задание по ООП 13.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начинаю делать домашнее задание по ООП 13.2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="13.2 - Задание №1" />
+    <MESSAGE value="13.2 Задание №1" />
+    <option name="LAST_COMMIT_MESSAGE" value="13.2 Задание №1" />
   </component>
 </project>
