@@ -18,20 +18,17 @@ class Category:
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.products)
 
-    @classmethod
-    def new_product(cls, name, description, products):
+    def add_product(self, product):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        new_product = cls(name, description, products)
-        return new_product
+        self.products.append(product)
 
     @property
-    def display_products_in_category(self):
-        for products in Category.products:
-            res = f"{products[0]}, {products[1]} рублей. Остаток: {products[2]} штук"
-        return res
+    def output_products_in_category(self):
+        """Для атрибута класса Category «товары» создаем геттер, который будет выводить список товаров в формате:
+        Продукт, 80 руб. Остаток: 15 шт."""
+        for product in self.products:
+            return list(f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт.")
 
-    # def __repr__(self, res=None):
-    #     pass
 
 class Product:
     """Создаем класс Product"""
@@ -47,21 +44,26 @@ class Product:
         self.price = price
         self.quantity_in_stock = quantity_in_stock
 
-    def __str__(self):
-        return f"{self.name}"
-
     @classmethod
-    def new_product(cls, name, description, price, quantity_in_stock):
+    def create_product(cls, name, description, price, quantity_in_stock):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        new_product = cls(None,
-                          None,
-                          0.0,
-                          0)
-        return new_product
+        product = cls(name, description, price, quantity_in_stock)
+        return product
+
+    @property
+    def get_price(self):
+        return self.price
+
+    @get_price.setter
+    def get_price(self, new_price):
+        self.price = self.check_price(new_price)
 
     @staticmethod
-    def chek_attr(name, description, price, quantity_in_stock):
-        pass
-
-# c1 = Category("jhvjh", "jkjbjb", ['y','2','r','y'])
-# print(c1)
+    def check_price(new_price):
+        if new_price <= 0:
+            return "Введена не корректная цена!"
+        elif new_price < Product.get_price:
+            if input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ").isalpha() == "y" or "Y":
+                return new_price
+        else:
+            return new_price
