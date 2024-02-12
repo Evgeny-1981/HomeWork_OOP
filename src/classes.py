@@ -15,6 +15,9 @@ class Category:
         self.description = description
         self.products = products
 
+    def display(self):
+        return self.name
+
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.products)
 
