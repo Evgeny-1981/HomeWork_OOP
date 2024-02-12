@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f60a13f-ddff-404b-a185-4c7b8740943a" name="Changes" comment="Вариант для сдачи №1" />
+    <list default="true" id="8f60a13f-ddff-404b-a185-4c7b8740943a" name="Changes" comment="Начинаю делать домашнее задание по ООП 13.2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +83,7 @@
       <command value="load_from_json" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in test_homework_oop.py">
     <configuration name="bankaccount" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop_additional_tasks" />
       <option name="ENV_FILES" value="" />
@@ -193,9 +196,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.load_from_json (1)" />
-        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
         <item itemvalue="Python.classes" />
         <item itemvalue="Python.bankaccount" />
       </list>
@@ -265,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707554987324</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Начинаю делать домашнее задание по ООП 13.2">
+      <option name="closed" value="true" />
+      <created>1707716167178</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707716167178</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -279,11 +290,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>5</line>

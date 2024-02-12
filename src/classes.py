@@ -13,7 +13,7 @@ class Category:
         """Инииализируем объект класса Category"""
         self.name = name
         self.description = description
-        self.products = products
+        self.__products = products
 
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.products)
