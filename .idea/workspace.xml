@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f60a13f-ddff-404b-a185-4c7b8740943a" name="Changes" comment="Вариант для сдачи №1">
-      <change afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/task2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/HomeWork_OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HomeWork_OOP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/utils/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_from_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/load_from_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/albums.py" beforeDir="false" afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/albums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/bottle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/bottle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/number.py" beforeDir="false" afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/number.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/students.py" beforeDir="false" afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson1/students.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oop_additional_tasks/lesson2/bankaccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/../oop_additional_tasks/lesson2/bankaccount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_homework_oop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/load_from_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/load_from_json.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +48,7 @@
     "Python tests.Python tests for test.test_product_init.executor": "Run",
     "Python tests.Python tests in test.py.executor": "Run",
     "Python tests.Python tests in test_category.py.executor": "Run",
+    "Python tests.Python tests in test_homework_oop.py.executor": "Run",
     "Python tests.Python tests in test_product.py.executor": "Run",
     "Python.albums.executor": "Run",
     "Python.bankaccount.executor": "Run",
@@ -95,7 +86,7 @@
       <command value="load_from_json" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.classes">
+  <component name="RunManager" selected="Python.main">
     <configuration name="bankaccount" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop_additional_tasks" />
       <option name="ENV_FILES" value="" />
@@ -140,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="load_from_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="load_from_json (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HomeWork_OOP" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,11 +140,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Evgeny\PycharmProjects\HomeWork_OOP\utils\load_from_json.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/load_from_json.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,7 +175,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_homework_oop.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="HomeWork_OOP" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,24 +186,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_homework_oop.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.load_from_json (1)" />
       <item itemvalue="Python.bankaccount" />
       <item itemvalue="Python.classes" />
-      <item itemvalue="Python.load_from_json" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python tests.Python tests in test.py" />
+      <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.classes" />
-        <item itemvalue="Python tests.Python tests in test.py" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.load_from_json (1)" />
+        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
+        <item itemvalue="Python.classes" />
         <item itemvalue="Python.bankaccount" />
-        <item itemvalue="Python.load_from_json" />
       </list>
     </recent_temporary>
   </component>
@@ -309,22 +300,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/load_from_json.py</url>
-          <line>20</line>
+          <line>27</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/load_from_json.py</url>
-          <line>16</line>
+          <line>23</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/load_from_json.py</url>
-          <line>19</line>
+          <line>26</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/load_from_json.py</url>
-          <line>32</line>
+          <line>46</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
