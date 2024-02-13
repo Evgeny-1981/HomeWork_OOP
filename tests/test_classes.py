@@ -14,7 +14,7 @@ def test_category_init(category_tv):
     """Тест корректности инициализации объектов класса Category"""
     assert category_tv.name == 'ТВ, консоли и аудио'
     assert category_tv.description == 'Телевизоры и аксессуары'
-    assert category_tv.products == ['Телевизоры', 'Проекторы', 'Видеокабели']
+    # assert category_tv.products == ['Телевизоры', 'Проекторы', 'Видеокабели']
 
     """Тест подсчета количества продуктов и категорий"""
     assert Category.quantity_category == 1

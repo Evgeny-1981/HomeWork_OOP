@@ -13,19 +13,19 @@ class Category:
         """Инииализируем объект класса Category"""
         self.name = name
         self.description = description
-        self.products = products
+        self.__products = products
 
         Category.quantity_category += 1
-        Category.quantity_uniq_product += len(self.products)
+        Category.quantity_uniq_product += len(self.__products)
 
     def add_product(self, product):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        self.products.append(product)
+        self.__products.append(product)
 
     @property
     def output_products_in_category(self):
         """Для атрибута класса Category «товары» создаем геттер, который будет выводить список товаров в формате:
-        Продукт, 80 руб. Остаток: 15 шт."""
+        Продукт, XX руб. Остаток: XX шт."""
         for product in self.products:
             return list(f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт.")
 
@@ -56,7 +56,7 @@ class Product:
 
     @get_price.setter
     def get_price(self, new_price):
-        if new_price <= 0:
+        if new_price <= 0 or not isinstance(new_price, float):
             print("Введена некорректная цена!")
         elif new_price <= self.price:
             user_input = input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ")
@@ -64,15 +64,3 @@ class Product:
                 self.price = new_price
         else:
             self.price = new_price
-
-
-
-    # @staticmethod
-    # def check_price(price):
-    #     if price <= product1.get_price:
-    #         return "Введена некорректная цена!"
-    #     elif price <= 5:
-    #         if input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ").isalpha() == "y" or "Y":
-    #             return price
-    #     else:
-    #         return price
