@@ -56,14 +56,23 @@ class Product:
 
     @get_price.setter
     def get_price(self, new_price):
-        self.price = self.check_price(new_price)
-
-    @staticmethod
-    def check_price(new_price):
         if new_price <= 0:
-            return "Введена не корректная цена!"
-        elif new_price < Product.get_price:
-            if input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ").isalpha() == "y" or "Y":
-                return new_price
+            print("Введена некорректная цена!")
+        elif new_price <= self.price:
+            user_input = input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ")
+            if user_input.lower() == 'y':
+                self.price = new_price
         else:
-            return new_price
+            self.price = new_price
+
+
+
+    # @staticmethod
+    # def check_price(price):
+    #     if price <= product1.get_price:
+    #         return "Введена некорректная цена!"
+    #     elif price <= 5:
+    #         if input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ").isalpha() == "y" or "Y":
+    #             return price
+    #     else:
+    #         return price

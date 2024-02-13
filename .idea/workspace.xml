@@ -87,7 +87,7 @@
       <command value="load_from_json" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.classes">
+  <component name="RunManager" selected="Python.main">
     <configuration name="classes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HomeWork_OOP" />
       <option name="ENV_FILES" value="" />
@@ -200,10 +200,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.classes" />
-        <item itemvalue="Python.load_from_json (1)" />
-        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.classes" />
+        <item itemvalue="Python tests.Python tests in test_homework_oop.py" />
+        <item itemvalue="Python.load_from_json (1)" />
         <item itemvalue="Python.test_homework_oop" />
       </list>
     </recent_temporary>
@@ -308,5 +308,12 @@
     <MESSAGE value="13.2 - Задание №1" />
     <MESSAGE value="13.2 Задание №1" />
     <option name="LAST_COMMIT_MESSAGE" value="13.2 Задание №1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="item" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
