@@ -18,6 +18,7 @@ class Category:
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.__products)
 
+
     def add_product(self, product):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
         self.__products.append(product)
@@ -26,7 +27,7 @@ class Category:
     def output_products_in_category(self):
         """Для атрибута класса Category «товары» создаем геттер, который будет выводить список товаров в формате:
         Продукт, XX руб. Остаток: XX шт."""
-        for product in self.products:
+        for product in self.__products:
             return list(f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт.")
 
 
@@ -52,10 +53,13 @@ class Product:
 
     @property
     def get_price(self):
+        """Геттер для атрибута цены"""
         return self.price
 
     @get_price.setter
     def get_price(self, new_price):
+        """Сеттер для атрибута цены. Если новая цена равна или нижу ноля, то выводим сообщение о некорректности.
+        Иначе запрашиваем разрешение, если цена ниже текущей и записываем новую цену на товар"""
         if new_price <= 0 or not isinstance(new_price, float):
             print("Введена некорректная цена!")
         elif new_price <= self.price:
