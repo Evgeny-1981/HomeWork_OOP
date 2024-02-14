@@ -1,5 +1,5 @@
 class Category:
-    """Создаем класс Category"""
+    """Создаем класс Category!"""
     name: str
     description: str
     products: list
