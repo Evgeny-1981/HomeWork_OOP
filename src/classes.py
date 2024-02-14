@@ -18,7 +18,6 @@ class Category:
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.__products)
 
-
     def add_product(self, product):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
         self.__products.append(product)
