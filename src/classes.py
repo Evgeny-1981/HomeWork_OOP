@@ -61,7 +61,7 @@ class Product:
         Иначе запрашиваем разрешение, если цена ниже текущей и записываем новую цену на товар"""
         if new_price <= 0 or not isinstance(new_price, float):
             print("Введена некорректная цена!")
-        elif new_price <= self.price:
+        elif new_price < self.price:
             user_input = input("Подтвердите понижение цены на товар: Y/N (Y - да, N - нет): ")
             if user_input.lower() == 'y':
                 self.price = new_price
