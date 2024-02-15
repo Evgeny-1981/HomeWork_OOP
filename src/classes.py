@@ -19,7 +19,7 @@ class Category:
         Category.quantity_uniq_product += len(self.__products)
 
     def add_product(self, product):
-        """Метод принимает на вход объект и добавляет его в список"""
+        """Метод принимает на вход объект товара и добавляет его в список"""
         self.__products.append(product)
 
     @property
