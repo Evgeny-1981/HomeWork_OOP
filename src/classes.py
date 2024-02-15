@@ -26,9 +26,8 @@ class Category:
     def output_products_in_category(self):
         """Для атрибута класса Category «товары» создаем геттер, который будет выводить список товаров в формате:
         Продукт, XX руб. Остаток: XX шт."""
-        for product in self.__products:
-            return [f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт." for product in self.__products]
-
+        return [f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт." for product in
+                self.__products]
 
 
 class Product:
