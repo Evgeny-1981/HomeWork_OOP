@@ -62,9 +62,7 @@ class Product:
     def __add__(self, other):
         """Складваем объекты между собой.
         Результат это сумма произведений стоимости на количество товара на складе"""
-        a = self.price * self.quantity_in_stock
-        b = other.price * other.quantity_in_stock
-        total = a + b
+        total = self.price * self.quantity_in_stock + other.price * other.quantity_in_stock
         return total
 
     @classmethod
