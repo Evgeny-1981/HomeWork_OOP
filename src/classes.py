@@ -47,6 +47,7 @@ class Product:
     description: str
     price: float
     quantity_in_stock: int
+    color: str #15.1 - добавили новый атрибут класса для наследуемых классов SmartPhone и GrassLawn
 
     def __init__(self, name, description, price, quantity_in_stock):
         """Инииализируем объект класса Product"""
@@ -88,3 +89,25 @@ class Product:
                 self.price = new_price
         else:
             self.price = new_price
+
+
+class SmartPhone(Product):
+    efficiency: str
+    model: str
+    volume_ram: int
+
+    def __init__(self, efficiency, model, volume_ram, name, description, price, quantity_in_stock):
+        super().__init__(name, description, price, quantity_in_stock)
+        self.efficiency = efficiency
+        self.model = model
+        self.volume_ram = volume_ram
+
+
+class GrassLawn(Product):
+    country_origin: str
+    germ_period: float
+
+    def __init__(self, country_origin, germ_period, name, description, price, quantity_in_stock):
+        super().__init__(name, description, price, quantity_in_stock)
+        self.country_origin = country_origin
+        self.germ_period = germ_period
