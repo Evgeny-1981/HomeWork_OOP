@@ -32,13 +32,12 @@ class Category:
 
     def __len__(self):
         """Подсчет общего числа продуктов на складе"""
-        self.length = len(self.__products)
-        return self.length
+        return len(self.__products)
 
     def __str__(self):
         """Добавляем строковое отображение в следующем виде:
         Название категории, количество продуктов: XX шт."""
-        return f"{self.name}, количество продуктов: {self.length} шт."
+        return f"{self.name}, количество продуктов: {len(self.__products)} шт."
 
 
 class Product:
@@ -47,14 +46,15 @@ class Product:
     description: str
     price: float
     quantity_in_stock: int
-    color: str #15.1 - добавили новый атрибут класса для наследуемых классов SmartPhone и GrassLawn
+    color: str
 
-    def __init__(self, name, description, price, quantity_in_stock):
+    def __init__(self, name, description, price, quantity_in_stock, color):
         """Инииализируем объект класса Product"""
         self.name = name
         self.description = description
         self.price = price
         self.quantity_in_stock = quantity_in_stock
+        self.color = color
 
     def __str__(self):
         """ Создаем строковое отображение в следующем виде: Название продукта, ХХ руб. Остаток: ХХ шт."""
@@ -92,22 +92,19 @@ class Product:
 
 
 class SmartPhone(Product):
-    efficiency: str
-    model: str
-    volume_ram: int
+    """Создание дочернего класса 'Смартофон'"""
 
-    def __init__(self, name, description, price, quantity_in_stock, efficiency, model, volume_ram, ):
-        super().__init__(name, description, price, quantity_in_stock)
+    def __init__(self, name, description, price, quantity_in_stock, color, efficiency, model, volume_ram):
+        super().__init__(name, description, price, quantity_in_stock, color)
         self.efficiency = efficiency
         self.model = model
         self.volume_ram = volume_ram
 
 
 class GrassLawn(Product):
-    country_origin: str
-    germ_period: float
+    """Создание дочернего класса 'Трава газонная'"""
 
-    def __init__(self, name, description, price, quantity_in_stock, country_origin, germ_period):
-        super().__init__(name, description, price, quantity_in_stock)
+    def __init__(self, name, description, price, quantity_in_stock, color, country_origin, germ_period):
+        super().__init__(name, description, price, quantity_in_stock, color)
         self.country_origin = country_origin
         self.germ_period = germ_period
