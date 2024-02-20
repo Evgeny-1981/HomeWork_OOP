@@ -96,7 +96,7 @@ class SmartPhone(Product):
     model: str
     volume_ram: int
 
-    def __init__(self, efficiency, model, volume_ram, name, description, price, quantity_in_stock):
+    def __init__(self, name, description, price, quantity_in_stock, efficiency, model, volume_ram, ):
         super().__init__(name, description, price, quantity_in_stock)
         self.efficiency = efficiency
         self.model = model
@@ -107,7 +107,7 @@ class GrassLawn(Product):
     country_origin: str
     germ_period: float
 
-    def __init__(self, country_origin, germ_period, name, description, price, quantity_in_stock):
+    def __init__(self, name, description, price, quantity_in_stock, country_origin, germ_period):
         super().__init__(name, description, price, quantity_in_stock)
         self.country_origin = country_origin
         self.germ_period = germ_period
