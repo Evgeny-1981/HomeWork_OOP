@@ -19,7 +19,7 @@ class Category:
         Category.quantity_uniq_product += len(self.__products)
 
     def add_product(self, product):
-        """Метод создает новый товар и вовращает объект, который можно добавить в список"""
+        """Метод принимает на вход объект товара и добавляет его в список"""
         if not isinstance(product, Product):
             raise TypeError('Нельзя добавлять в список объекты, кроме объектов Product и его наследников')
         else:
@@ -29,9 +29,8 @@ class Category:
     def output_products_in_category(self):
         """Для атрибута класса Category «товары» создаем геттер, который будет выводить список товаров в формате:
         Продукт, XX руб. Остаток: XX шт."""
-        for product in self.__products:
-            return [f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт." for product in
-                    self.__products]
+        return [f"{product.name}, {product.price} руб. Остаток: {product.quantity_in_stock} шт."
+                for product in self.__products]
 
     def __len__(self):
         """Подсчет общего числа продуктов на складе"""
@@ -40,7 +39,7 @@ class Category:
     def __str__(self):
         """Добавляем строковое отображение в следующем виде:
         Название категории, количество продуктов: XX шт."""
-        return f"{self.name}, количество продуктов: {len(self.__products)} шт."
+        return f"{self.name}, количество продуктов: {len(self)} шт."
 
 
 class Product:
@@ -66,16 +65,15 @@ class Product:
     def __add__(self, other):
         """Складваем объекты между собой.
         Результат это сумма произведений стоимости на количество товара на складе"""
-        if not isinstance(other, Product):
-            raise ValueError('Ошибка')
+        if type(self) is not type(other):
+            raise TypeError('Нельзя складывать товары разных типов')
         total = self.price * self.quantity_in_stock + other.price * other.quantity_in_stock
         return total
 
-
     @classmethod
-    def create_product(cls, name, description, price, quantity_in_stock):
+    def create_product(cls, name, description, price, quantity_in_stock, color=None):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        product = cls(name, description, price, quantity_in_stock)
+        product = cls(name, description, price, quantity_in_stock, color)
         return product
 
     @property
@@ -99,6 +97,10 @@ class Product:
 
 class SmartPhone(Product):
     """Создание дочернего класса 'Смартофон'"""
+    """Добавили новые атрибуты создаваемого класса согласно задания 15.1"""
+    efficiency: int  # производитеьность
+    model: str  # модель
+    volume_ram: int  # объем встроенной памяти
 
     def __init__(self, name, description, price, quantity_in_stock, color, efficiency, model, volume_ram):
         super().__init__(name, description, price, quantity_in_stock, color)
@@ -109,6 +111,9 @@ class SmartPhone(Product):
 
 class GrassLawn(Product):
     """Создание дочернего класса 'Трава газонная'"""
+    """Добавили новые атрибуты создаваемого класса согласно задания 15.1"""
+    country_origin: str  # страна-производитель
+    germ_period: int  # срок прорастания
 
     def __init__(self, name, description, price, quantity_in_stock, color, country_origin, germ_period):
         super().__init__(name, description, price, quantity_in_stock, color)
