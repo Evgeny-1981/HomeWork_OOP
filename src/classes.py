@@ -20,7 +20,10 @@ class Category:
 
     def add_product(self, product):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        self.__products.append(product)
+        if not isinstance(product, Product):
+            raise TypeError('Нельзя добавлять в список объекты, кроме объектов Product и его наследников')
+        else:
+            self.__products.append(product)
 
     @property
     def output_products_in_category(self):
@@ -48,7 +51,7 @@ class Product:
     quantity_in_stock: int
     color: str
 
-    def __init__(self, name, description, price, quantity_in_stock, color):
+    def __init__(self, name, description, price, quantity_in_stock, color=None):
         """Инииализируем объект класса Product"""
         self.name = name
         self.description = description
@@ -63,8 +66,11 @@ class Product:
     def __add__(self, other):
         """Складваем объекты между собой.
         Результат это сумма произведений стоимости на количество товара на складе"""
+        if not isinstance(other, Product):
+            raise ValueError('Ошибка')
         total = self.price * self.quantity_in_stock + other.price * other.quantity_in_stock
         return total
+
 
     @classmethod
     def create_product(cls, name, description, price, quantity_in_stock):
