@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Category:
     """Создаем класс Category!"""
     name: str
@@ -42,7 +44,7 @@ class Category:
         return f"{self.name}, количество продуктов: {len(self)} шт."
 
 
-class Product:
+class Product(ABC):
     """Создаем класс Product"""
     name: str
     description: str
