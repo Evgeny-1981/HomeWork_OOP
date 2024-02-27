@@ -99,10 +99,9 @@ class Product(Mixin, AbstractProduct):
     quantity_in_stock: int
     color: str
 
-    def __init__(self, name, description, price, quantity_in_stock, color=None):
+    def __init__(self, name, description, price, quantity_in_stock, color):
         """Инииализируем объект класса Product"""
-        super().__init__(name, description, price, quantity_in_stock, color=None)
-        self.color = color
+        super().__init__(name, description, price, quantity_in_stock, color)
 
     def __add__(self, other):
         """Складваем объекты между собой.
