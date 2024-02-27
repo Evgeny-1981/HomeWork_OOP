@@ -1,4 +1,32 @@
-class Category:
+from abc import ABC, abstractmethod
+
+
+class AbstractCategory(ABC):
+    """Создаем абстрактный класс для класса Category"""
+
+    def __init__(self, name, description, products):
+        """Иницализируем объект класса. Сюды вынесены атрибуты для конструктора объекта"""
+        self.name = name
+        self.description = description
+        self.__products = products
+
+    @abstractmethod
+    def __str__(self):
+        pass
+
+    @abstractmethod
+    def __repr__(self):
+        pass
+
+
+class Mixin:
+    """Создаем класс для вывода информации о созданном объекте"""
+
+    def __repr__(self):
+        return f'Создан объект класса {self.__class__.__name__} с атрибутами: {self.__dict__}'
+
+
+class Category(Mixin, AbstractCategory):
     """Создаем класс Category!"""
     name: str
     description: str
@@ -10,6 +38,7 @@ class Category:
     quantity_uniq_product = 0
 
     def __init__(self, name, description, products):
+        super().__init__(name, description, products)
         """Инииализируем объект класса Category"""
         self.name = name
         self.description = description
@@ -42,7 +71,27 @@ class Category:
         return f"{self.name}, количество продуктов: {len(self)} шт."
 
 
-class Product:
+class AbstractProduct(ABC):
+    """Создаем абстрактный класс для классов Product, SmartPhone, GrassLawn"""
+
+    def __init__(self, name, description, price, quantity_in_stock, color=None):
+        """Иницализируем объект класса. Сюды вынесены общие атрибуты для конструктора объекта"""
+        self.name = name
+        self.description = description
+        self.price = price
+        self.quantity_in_stock = quantity_in_stock
+        self.color = color
+
+    @abstractmethod
+    def __add__(self, other):
+        pass
+
+    @abstractmethod
+    def __str__(self):
+        pass
+
+
+class Product(Mixin, AbstractProduct):
     """Создаем класс Product"""
     name: str
     description: str
@@ -52,15 +101,8 @@ class Product:
 
     def __init__(self, name, description, price, quantity_in_stock, color=None):
         """Инииализируем объект класса Product"""
-        self.name = name
-        self.description = description
-        self.price = price
-        self.quantity_in_stock = quantity_in_stock
+        super().__init__(name, description, price, quantity_in_stock, color=None)
         self.color = color
-
-    def __str__(self):
-        """ Создаем строковое отображение в следующем виде: Название продукта, ХХ руб. Остаток: ХХ шт."""
-        return f"{self.name}, {self.price} руб. Остаток: {self.quantity_in_stock} шт."
 
     def __add__(self, other):
         """Складваем объекты между собой.
@@ -69,6 +111,10 @@ class Product:
             raise TypeError('Нельзя складывать товары разных типов')
         total = self.price * self.quantity_in_stock + other.price * other.quantity_in_stock
         return total
+
+    def __str__(self):
+        """ Создаем строковое отображение в следующем виде: Название продукта, ХХ руб. Остаток: ХХ шт."""
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity_in_stock} шт."
 
     @classmethod
     def create_product(cls, name, description, price, quantity_in_stock, color=None):
@@ -95,10 +141,9 @@ class Product:
             self.price = new_price
 
 
-class SmartPhone(Product):
+class SmartPhone(Product, Mixin):
     """Создание дочернего класса 'Смартофон'"""
-    """Добавили новые атрибуты создаваемого класса согласно задания 15.1"""
-    efficiency: int  # производитеьность
+    efficiency: float  # производитеьность
     model: str  # модель
     volume_ram: int  # объем встроенной памяти
 
@@ -109,9 +154,8 @@ class SmartPhone(Product):
         self.volume_ram = volume_ram
 
 
-class GrassLawn(Product):
+class GrassLawn(Product, Mixin):
     """Создание дочернего класса 'Трава газонная'"""
-    """Добавили новые атрибуты создаваемого класса согласно задания 15.1"""
     country_origin: str  # страна-производитель
     germ_period: int  # срок прорастания
 
