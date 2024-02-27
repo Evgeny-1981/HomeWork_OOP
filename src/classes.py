@@ -2,20 +2,13 @@ from abc import ABC, abstractmethod
 
 
 class AbstractCategory(ABC):
-    """Создаем абстрактный класс для классов Product, SmartPhone, GrassLawn"""
-    name: str
-    description: str
-    products: list
+    """Создаем абстрактный класс для класса Category"""
 
     def __init__(self, name, description, products):
         """Иницализируем объект класса. Сюды вынесены атрибуты для конструктора объекта"""
         self.name = name
         self.description = description
         self.__products = products
-
-    # @abstractmethod
-    # def __add__(self, other):
-    #     pass
 
     @abstractmethod
     def __str__(self):
@@ -26,14 +19,14 @@ class AbstractCategory(ABC):
         pass
 
 
-class MixinProd:
+class Mixin:
     """Создаем класс для вывода информации о созданном объекте"""
 
     def __repr__(self):
         return f'Создан объект класса {self.__class__.__name__} с атрибутами: {self.__dict__}'
 
 
-class Category(MixinProd, AbstractCategory):
+class Category(Mixin, AbstractCategory):
     """Создаем класс Category!"""
     name: str
     description: str
@@ -47,9 +40,9 @@ class Category(MixinProd, AbstractCategory):
     def __init__(self, name, description, products):
         super().__init__(name, description, products)
         """Инииализируем объект класса Category"""
-        # self.name = name
-        # self.description = description
-        # self.__products = products
+        self.name = name
+        self.description = description
+        self.__products = products
 
         Category.quantity_category += 1
         Category.quantity_uniq_product += len(self.__products)
@@ -77,9 +70,6 @@ class Category(MixinProd, AbstractCategory):
         Название категории, количество продуктов: XX шт."""
         return f"{self.name}, количество продуктов: {len(self)} шт."
 
-    def __repr__(self):
-        return super().__repr__()
-
 
 class AbstractProduct(ABC):
     """Создаем абстрактный класс для классов Product, SmartPhone, GrassLawn"""
@@ -101,14 +91,7 @@ class AbstractProduct(ABC):
         pass
 
 
-# class MixinProd:
-#     """Создаем класс для вывода информации о созданном объекте"""
-#
-#     def __repr__(self):
-#         return f'Создан объект класса {self.__class__.__name__} с атрибутами: {self.__dict__}'
-
-
-class Product(MixinProd, AbstractProduct):
+class Product(Mixin, AbstractProduct):
     """Создаем класс Product"""
     name: str
     description: str
@@ -158,7 +141,7 @@ class Product(MixinProd, AbstractProduct):
             self.price = new_price
 
 
-class SmartPhone(Product, MixinProd):
+class SmartPhone(Product, Mixin):
     """Создание дочернего класса 'Смартофон'"""
     efficiency: float  # производитеьность
     model: str  # модель
@@ -171,7 +154,7 @@ class SmartPhone(Product, MixinProd):
         self.volume_ram = volume_ram
 
 
-class GrassLawn(Product, MixinProd):
+class GrassLawn(Product, Mixin):
     """Создание дочернего класса 'Трава газонная'"""
     country_origin: str  # страна-производитель
     germ_period: int  # срок прорастания
