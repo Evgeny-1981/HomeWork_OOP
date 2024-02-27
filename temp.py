@@ -1,0 +1,16 @@
+from src.classes import Product, SmartPhone, GrassLawn, Category
+
+p1 = Product('Телевизор', 'новейший', 10000, 2, 'red')
+s1 = SmartPhone('Смартфон', 'Новейший', 20000, 2, 'blue', 2, 'Realme', 128)
+# s2 = SmartPhone('Смартфон', 'Новейший', 15000, 3, 'blue', 1.5, 'Nokia', 64)
+g1 = GrassLawn('Трава', 'Зеленая', 1000, 2, 'Green', 'RUS', 3)
+print(p1.__repr__())
+print(s1.__repr__())
+print(g1.__repr__())
+# p2 = Product.create_product('Наушники', 'Отличнвы е наушники', 2000.0, 10, 'White')
+# print(p2.__repr__())
+# sum = s1.__add__(s2)
+# print(sum)
+# print(s2.__str__())
+cat1 = Category('TV', 'Новые телевизоры с технологией 3D', [p1, s1, g1])
+print(cat1.output_products_in_category)
