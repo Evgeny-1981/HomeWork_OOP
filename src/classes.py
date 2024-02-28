@@ -90,6 +90,10 @@ class AbstractProduct(ABC):
     def __str__(self):
         pass
 
+    @abstractmethod
+    def create_product(self):
+        pass
+
 
 class Product(Mixin, AbstractProduct):
     """Создаем класс Product"""
