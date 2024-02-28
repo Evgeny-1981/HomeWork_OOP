@@ -91,7 +91,7 @@ class AbstractProduct(ABC):
         pass
 
     @abstractmethod
-    def create_product(self):
+    def create_product(self, name, description, price, quantity_in_stock, color):
         pass
 
 
@@ -103,7 +103,7 @@ class Product(Mixin, AbstractProduct):
     quantity_in_stock: int
     color: str
 
-    def __init__(self, name, description, price, quantity_in_stock, color=None):
+    def __init__(self, name, description, price, quantity_in_stock, color):
         """Инииализируем объект класса Product"""
         self.name = name
         self.description = description
@@ -125,9 +125,9 @@ class Product(Mixin, AbstractProduct):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity_in_stock} шт."
 
     @classmethod
-    def create_product(cls, name, description, price, quantity_in_stock, color=None):
+    def create_product(cls, name, description, price, quantity_in_stock, color):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        product = cls(name, description, price, quantity_in_stock, color=None)
+        product = cls(name, description, price, quantity_in_stock, color)
         return product
 
     @property
