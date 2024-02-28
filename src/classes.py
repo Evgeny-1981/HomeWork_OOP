@@ -92,7 +92,7 @@ class AbstractProduct(ABC):
 
     @classmethod
     @abstractmethod
-    def create_product(self, name, description, price, quantity_in_stock, color):
+    def create_product(cls, name, description, price, quantity_in_stock, color):
         pass
 
 
