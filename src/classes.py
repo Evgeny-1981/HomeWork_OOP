@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 class AbstractCategory(ABC):
     """Создаем абстрактный класс для класса Category"""
 
+    @abstractmethod
     def __init__(self):
         pass
 
@@ -77,6 +78,7 @@ class Category(Mixin, AbstractCategory):
 class AbstractProduct(ABC):
     """Создаем абстрактный класс для классов Product, SmartPhone, GrassLawn"""
 
+    @abstractmethod
     def __init__(self):
         pass
 
@@ -141,6 +143,9 @@ class Product(Mixin, AbstractProduct):
                 self.price = new_price
         else:
             self.price = new_price
+
+    def __repr__(self):
+        return super().__repr__()
 
 
 class SmartPhone(Product):
