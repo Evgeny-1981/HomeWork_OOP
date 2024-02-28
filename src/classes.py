@@ -99,7 +99,7 @@ class Product(Mixin, AbstractProduct):
     quantity_in_stock: int
     color: str
 
-    def __init__(self, name, description, price, quantity_in_stock, color):
+    def __init__(self, name, description, price, quantity_in_stock, color=None):
         """Инииализируем объект класса Product"""
         self.name = name
         self.description = description
@@ -123,7 +123,7 @@ class Product(Mixin, AbstractProduct):
     @classmethod
     def create_product(cls, name, description, price, quantity_in_stock, color=None):
         """Метод создает новый товар и вовращает объект, который можно добавить в список"""
-        product = cls(name, description, price, quantity_in_stock, color)
+        product = cls(name, description, price, quantity_in_stock, color=None)
         return product
 
     @property
