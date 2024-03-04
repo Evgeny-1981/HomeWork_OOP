@@ -50,8 +50,6 @@ class Category(Mixin, AbstractCategory):
 
     def add_product(self, product):
         """Метод принимает на вход объект товара и добавляет его в список"""
-        if product.quantity_in_stock == 0:
-            raise  ValueError('Товар с нулевым количеством не может быть добавлен')
         if not isinstance(product, Product):
             raise TypeError('Нельзя добавлять в список объекты, кроме объектов Product и его наследников')
         else:
@@ -75,6 +73,10 @@ class Category(Mixin, AbstractCategory):
 
     def __repr__(self):
         return super().__repr__()
+
+
+    # def average_price(self):
+    #     for Product.price in Product.:
 
 
 class AbstractProduct(ABC):
@@ -112,6 +114,9 @@ class Product(Mixin, AbstractProduct):
         self.description = description
         self.price = price
         self.quantity_in_stock = quantity_in_stock
+        """Добавляем исключение, если количество тоара нулевое"""
+        if quantity_in_stock == 0:
+            raise ValueError(f'Товар "{self.name} {self.description}" с нулевым количеством не может быть добавлен')
         self.color = color
         super().__init__()
 
