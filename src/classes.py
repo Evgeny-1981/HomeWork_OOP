@@ -78,7 +78,7 @@ class Category(Mixin, AbstractCategory):
         """Метод подсчитывает средний ценник всех товаров"""
         total_amount = 0
         for product in self.__products:
-            total_amount += product.price
+            total_amount += product.get_price
         try:
             return total_amount / len(self.__products)  # Возвращаем средний ценник товаров в категории
         except ZeroDivisionError:
@@ -120,9 +120,9 @@ class Product(Mixin, AbstractProduct):
         self.description = description
         self.price = price
         self.quantity_in_stock = quantity_in_stock
-        # """Добавляем исключение, если количество тоара нулевое"""
-        # if quantity_in_stock == 0:
-        #     raise ValueError(f'Товар "{self.name} {self.description}" с нулевым количеством не может быть добавлен')
+        """Добавляем исключение, если количество тоара нулевое"""
+        if quantity_in_stock == 0:
+            raise ValueError(f'Товар "{self.name} {self.description}" с нулевым количеством не может быть добавлен')
         self.color = color
         super().__init__()
 
