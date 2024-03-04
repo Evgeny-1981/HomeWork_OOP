@@ -74,9 +74,15 @@ class Category(Mixin, AbstractCategory):
     def __repr__(self):
         return super().__repr__()
 
-
-    # def average_price(self):
-    #     for Product.price in Product.:
+    def average_price(self):
+        """Метод подсчитывает средний ценник всех товаров"""
+        total_amount = 0
+        for product in self.__products:
+            total_amount += product.price
+        try:
+            return total_amount / len(self.__products)  # Возвращаем средний ценник товаров в категории
+        except ZeroDivisionError:
+            return 0  # Возвращаем ноль в случае, если возникает исключение при делении на ноль
 
 
 class AbstractProduct(ABC):
@@ -114,9 +120,9 @@ class Product(Mixin, AbstractProduct):
         self.description = description
         self.price = price
         self.quantity_in_stock = quantity_in_stock
-        """Добавляем исключение, если количество тоара нулевое"""
-        if quantity_in_stock == 0:
-            raise ValueError(f'Товар "{self.name} {self.description}" с нулевым количеством не может быть добавлен')
+        # """Добавляем исключение, если количество тоара нулевое"""
+        # if quantity_in_stock == 0:
+        #     raise ValueError(f'Товар "{self.name} {self.description}" с нулевым количеством не может быть добавлен')
         self.color = color
         super().__init__()
 
