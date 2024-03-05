@@ -5,6 +5,11 @@ cat1 = Category('TV', 'Новые телевизоры с технологией
 p1 = Product('Телевизор', 'LG', 10000, 1, 'red')
 p2 = Product('Телевизор', 'Philips', 18000, 1, 'red')
 
+"""Выведем средню стоимость при нулевом количестве товаров в категории"""
+print(cat1)
+ap = Category.average_price(cat1)
+print(ap)
+
 """Добавляем в cat1 товар p1"""
 cat1.add_product(p1)
 print(cat1)
