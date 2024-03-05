@@ -25,7 +25,7 @@ def test_category_init(category_tv):
 def product_tv():
     return Product('Телевизор',
                    'LED LG 32LM576BPLD',
-                   22000, 10)
+                   22000, 10, 'red')
 
 
 def test_product_init(product_tv):
@@ -34,3 +34,4 @@ def test_product_init(product_tv):
     assert product_tv.description == 'LED LG 32LM576BPLD'
     assert product_tv.price == 22000
     assert product_tv.quantity_in_stock == 10
+    assert product_tv.color == 'red'
