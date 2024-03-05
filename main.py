@@ -4,7 +4,7 @@ from src.classes import Product, SmartPhone, GrassLawn, Category
 cat1 = Category('TV', 'Новые телевизоры с технологией 3D', [])
 p1 = Product('Телевизор', 'LG', 10000, 1, 'red')
 p2 = Product('Телевизор', 'Philips', 18000, 1, 'red')
-p3 = Product('Телевизор', 'Sony-KDX55', 100000, 0, 'red')
+p3 = Product('Телевизор', 'Sony-KDX55', 10000, 1, 'red')
 
 """Выведем средню стоимость при нулевом количестве товаров в категории"""
 print(cat1)
