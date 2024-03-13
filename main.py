@@ -5,6 +5,9 @@ cat1 = Category('TV', 'Новые телевизоры с технологией
 p1 = Product('Телевизор', 'LG', 10000, 1, 'red')
 p2 = Product('Телевизор', 'Philips', 18000, 1, 'red')
 p3 = Product('Телевизор', 'Sony-KDX55', 10000, 1, 'red')
+p4 = SmartPhone('qqqqqq', 'wwwwwww', 10000, 2, 'blue', '2', 'ww23', '25')
+ad = Product.__add__(p1, p4)
+print(ad)
 
 """Выведем средню стоимость при нулевом количестве товаров в категории"""
 print(cat1)
