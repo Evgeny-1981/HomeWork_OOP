@@ -14,9 +14,10 @@ def load_categorys():
     for item in data:
         category = Category('name',
                             'description',
-                            'products')
+                            ['products''name'])
         category_list.append(category)
     return category_list
+
 
 
 def load_products():
@@ -35,3 +36,4 @@ def load_products():
                               'quantity')
             product_list.append(product)
     return product_list
+
